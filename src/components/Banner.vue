@@ -1,0 +1,38 @@
+<template>
+<div id="main-banner">
+    <h1>Make Your Burguer</h1>
+
+</div>
+</template>
+
+<script>
+    export default{
+        name: "Banner"
+    }
+</script>
+
+<style scoped>
+    #main-banner{
+        background-image: url("/home/leader/Make_Your_Burguer/make_your_burguer/public/img/burger.jpg");
+        background-position:  100%;
+        background-size: cover;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    #main-banner h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 60px;
+  background-color: #222;
+  padding: 20px 40px;
+}
+
+@media (max-width: 1061px) {
+  #main-banner {
+    background-position: right bottom;
+    }
+  }
+</style>

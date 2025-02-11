@@ -4,7 +4,7 @@
   <div class="main-container">
     <p>banner</p>
     <h1>Monte o seu Burguer:</h1>
-    <p>formulário</p>
+    <BurguerForm />
   </div>
   </div>
   
@@ -12,11 +12,13 @@
 
 <script>
 import Banner from '@/components/Banner.vue';
+import BurguerForm from '@/components/BurguerForm.vue';
 
 export default {
   name: "Home",
   components: {
-    Banner 
+    Banner ,
+    BurguerForm
   }
 }
 

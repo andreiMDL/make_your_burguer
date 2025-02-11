@@ -33,8 +33,8 @@ export default{
   }
 
   .main-container{
-    margin: 0px;
-    min-height: 250px;
+    margin: 18px;
+    min-height: border-box;
   }
 
   h1 {

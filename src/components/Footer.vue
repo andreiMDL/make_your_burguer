@@ -22,7 +22,7 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 0;
+    bottom: 1;
     width: 100%;
 }
 </style>

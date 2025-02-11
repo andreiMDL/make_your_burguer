@@ -16,7 +16,7 @@
         background-image: url("/home/leader/Make_Your_Burguer/make_your_burguer/public/img/burger.jpg");
         background-position:  100%;
         background-size: cover;
-        height: 90vh;
+        height: 80vh;
         display: flex;
         align-items: center;
         justify-content: flex-start;

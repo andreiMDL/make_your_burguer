@@ -1,7 +1,7 @@
 <template>
   <div id="main-banner">
-     <!-- Adicionar animação de transição -->
-    <a @click="scrollToSection" href="#div-pedido">Make Your burger</a>
+    <!-- Adicionar animação de transição -->
+    <a @click="scrollToSection" href="#div-pedido">Make Your Burger</a>
   </div>
 </template>
 
@@ -10,12 +10,12 @@ export default {
   name: "Banner",
   methods: {
 
-    scrollToForm(event){
+    scrollToForm(event) {
       event.preventDefault();
       const section = document.querySelector("#burger-form");
-      if(section){
-        section.scrollIntoView({ behavior: "smooth"});
-            }
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
     }
   }
 }
@@ -36,7 +36,7 @@ export default {
 
 #main-banner a {
   text-decoration: none;
-  margin-left: 165px ;
+  margin-left: 165px;
   border-radius: 25px;
   border: 3px solid #fcba03;
   margin-top: -100px;
@@ -49,9 +49,9 @@ export default {
   transition: .5s;
 }
 
-#main-banner a :hover{
-  background-color: #fcba03;
-  color: #3d360150;
+#main-banner a:hover {
+  color: #ffffff;
+  background-color: #15130e;
 }
 
 

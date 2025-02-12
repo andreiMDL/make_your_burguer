@@ -13,7 +13,7 @@
 
 <style scoped>
     #main-banner{
-        background-image: url("/home/leader/Make_Your_Burguer/make_your_burguer/public/img/burger.jpg");
+        background-image: url("/public/img/burger.jpg");
         background-position:  100%;
         background-size: cover;
         height: 80vh;

@@ -1,39 +1,59 @@
 <template>
   <div id="main-banner">
-    <h1>Make Your burger</h1>
-
+     <!-- Adicionar animação de transição -->
+    <a @click="scrollToSection" href="#div-pedido">Make Your burger</a>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Banner"
+  name: "Banner",
+  methods: {
+
+    scrollToForm(event){
+      event.preventDefault();
+      const section = document.querySelector("#burger-form");
+      if(section){
+        section.scrollIntoView({ behavior: "smooth"});
+            }
+    }
+  }
 }
 </script>
 
 <style scoped>
 #main-banner {
   background-image: url("/public/img/burger.jpg");
-  background-position: 100%;
+  background-position: center;
   background-size: cover;
-  height: 96vh;
+  width: 100%;
+  min-height: 600px;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-#main-banner h1 {
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+#main-banner a {
+  text-decoration: none;
+  margin-left: 165px ;
+  border-radius: 25px;
   border: 3px solid #fcba03;
-  border-left: 2px solid #222;
   margin-top: -100px;
   color: #fff;
   text-align: center;
+  color: #fcba03;
   font-size: 60px;
-  background-color: #222;
+  background-color: #3d360150;
   padding: 20px 40px;
+  transition: .5s;
 }
+
+#main-banner a :hover{
+  background-color: #fcba03;
+  color: #3d360150;
+}
+
 
 @media (max-width: 1061px) {
   #main-banner {

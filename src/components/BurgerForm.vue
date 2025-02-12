@@ -1,5 +1,7 @@
 <template>
-    <div>
+    <div id="div-pedido">
+         <!-- Adicionar verificação de campos obrigatórios -->
+        <Message :msg="msg" :v-show="msg" :v-html="msg"/>
         <form id="burger-form" @submit="createburger">
             <div class="input-container">
                 <label for="nome">Nome do cliente</label>
@@ -38,7 +40,7 @@
 </template>
 
 <script>
-
+import Message from './Message.vue';
 
 export default {
     name: "BuguerForm",
@@ -73,6 +75,7 @@ export default {
             e.preventDefault();
 
             const data = {
+                
                 nome: this.nome,
                 carne: this.carne,
                 pao: this.pao,
@@ -90,10 +93,10 @@ export default {
             const res = await req.json();
 
             console.log(res);
+  
+            this.msg = `Pedido realizado com sucesso! Código: ${res.id}`;
 
-            //colocar uma msg de sistema
-
-            // limpar msg
+            setTimeout(() => this.msg = "", 3000);
 
             //limpar os campos
             this.nome = "",
@@ -105,6 +108,9 @@ export default {
     },
     mounted() {
         this.getIngredientes();
+    },
+    components: {
+        Message
     }
 }
 </script>

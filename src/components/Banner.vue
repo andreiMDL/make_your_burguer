@@ -1,7 +1,7 @@
 <template>
-  <div id="main-banner">
+  <div id="main-banner" >
     <!-- Adicionar animação de transição -->
-    <a @click="scrollToSection" href="#div-pedido">Make Your Burger</a>
+    <a  @click="scrollToForm" href="#div-pedido">Make Your Burger</a>
   </div>
 </template>
 
@@ -40,17 +40,19 @@ export default {
   border-radius: 25px;
   border: 3px solid #fcba03;
   margin-top: -100px;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
-  color: #fcba03;
   font-size: 60px;
   background-color: #3d360150;
   padding: 20px 40px;
   transition: .5s;
+  scroll-behavior: smooth;
 }
 
 #main-banner a:hover {
-  color: #ffffff;
+  
+  
+  color: #fcba03;
   background-color: #15130e;
 }
 

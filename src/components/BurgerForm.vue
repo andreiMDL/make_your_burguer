@@ -3,7 +3,7 @@
          <!-- Adicionar verificação de campos obrigatórios -->
         <Message :msg="msg" :v-show="msg" :v-html="msg"/>
         <form id="burger-form" @submit="createburger">
-            <div class="input-container">
+            <div class="input-container" >
                 <label for="nome">Nome do cliente</label>
                 <input type="text" id="nome" name="nome" v-model="nome" placeholder="Digite o seu nome">
             </div>
@@ -92,7 +92,7 @@ export default {
 
             const res = await req.json();
 
-            console.log(res);
+            
   
             this.msg = `Pedido realizado com sucesso! Código: ${res.id}`;
 

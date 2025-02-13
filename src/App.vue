@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div> 
     <Navbar :logo="logo_src" :alt="app_name"/>
     <router-view/>
     <Footer />
@@ -25,6 +25,8 @@ export default{
 </script>
 
 <style>
+
+
   * {
     font-family: Helvetica;
     padding: 0;

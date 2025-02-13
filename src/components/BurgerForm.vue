@@ -92,7 +92,6 @@ export default {
 
             const res = await req.json();
 
-            
   
             this.msg = `Pedido realizado com sucesso! Código: ${res.id}`;
 
@@ -102,7 +101,7 @@ export default {
             this.nome = "",
             this.carne = "",
             this.pao = "",
-            this.opcionais = ""
+            this.opcionais = []
 
         }
     },

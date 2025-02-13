@@ -110,7 +110,7 @@
         "Bacon",
         "Cheddar"
       ],
-      "status": "Solicitado"
+      "status": "Em produção"
     },
     {
       "id": "7053",
@@ -140,6 +140,36 @@
       "pao": "Italiano Branco",
       "opcionais": [
         "Bacon"
+      ],
+      "status": "Finalizado"
+    },
+    {
+      "id": "afae",
+      "nome": "joão",
+      "carne": "Veggie burger",
+      "pao": "Integral",
+      "opcionais": [
+        "Cheddar"
+      ],
+      "status": "Solicitado"
+    },
+    {
+      "id": "e2e4",
+      "nome": null,
+      "carne": null,
+      "pao": null,
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado"
+    },
+    {
+      "id": "a09f",
+      "nome": "",
+      "carne": "",
+      "pao": "",
+      "opcionais": [
+        "Salame"
       ],
       "status": "Solicitado"
     }

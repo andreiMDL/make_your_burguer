@@ -143,13 +143,9 @@ label {
 input,
 select {
     width: 100%;
-    /* Largura total do contêiner */
     height: 36px;
-    /* Altura maior para a caixa */
     font-size: 16px;
-    /* Aumenta o tamanho da fonte */
     padding: 8px;
-    /* Adiciona mais espaço interno */
     box-sizing: border-box;
 
 }

@@ -40,9 +40,10 @@ export default {
     }
 
     #nav a{
+        
         color: #fcba03;
         text-decoration: none;
-        margin: 12px;
+        margin: 18px;
         transition: .5s;
     }
 

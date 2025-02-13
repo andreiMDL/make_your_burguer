@@ -1,6 +1,6 @@
 <template>
     <div id="div-pedido">
-         <!-- Adicionar verificação de campos obrigatórios -->
+         <!-- Transição de Home para pedidos -->
         <Message :msg="msg" :v-show="msg" :v-html="msg"/>
         <form id="burger-form" @submit="createburger">
             <div class="input-container" >

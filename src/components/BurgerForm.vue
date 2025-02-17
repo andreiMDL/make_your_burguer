@@ -117,6 +117,7 @@ export default {
 <style scoped>
 #burger-form {
 
+    
     max-width: 400px;
     margin: 0 auto;
 }
@@ -137,7 +138,7 @@ label {
     margin-bottom: 15px;
     color: #222;
     padding: 5px 10px;
-    border-left: 4px solid #fcba03;
+    border-left: 4px solid #ff9100;
 }
 
 input,
@@ -181,7 +182,7 @@ select {
 .submit-btn {
     height: 45px;
     background-color: #222;
-    color: #fcba03;
+    color: #ff9100;
     font-weight: bold;
     border: 2px solid #222;
     padding: 2px;

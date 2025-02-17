@@ -13,16 +13,19 @@
 </script>
 
 <style>
+
+
+
 #footer {
-    height: 150px;
+    height: 115px;
     background-color: #222;
     border-top: 4px solid #111;
-    color: #fcba03;
+    color: #ff9100;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    bottom: 1;
+    position: relative;
+    bottom: 0;
     width: 100%;
 }
 </style>

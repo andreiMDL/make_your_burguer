@@ -1,7 +1,8 @@
 <template>
-  <div id="main-banner" >
+  <div id="main-banner">
     <!-- Adicionar animação de transição -->
-    <a  @click="scrollToForm" href="#div-pedido">Make Your Burger</a>
+    <a @click="scrollToForm" href="#div-pedido">Make Your Burger</a>
+    
   </div>
 </template>
 
@@ -26,7 +27,6 @@ export default {
   background-image: url("/public/img/burger.jpg");
   background-position: center;
   background-size: cover;
-  width: 100%;
   min-height: 600px;
   height: 100vh;
   display: flex;
@@ -35,25 +35,34 @@ export default {
 }
 
 #main-banner a {
+  
   text-decoration: none;
   margin-left: 165px;
   border-radius: 25px;
-  border: 3px solid #fcba03;
-  margin-top: -100px;
-  color: #ffffff;
-  text-align: center;
+  font-family: "Marck Script", serif;
+  
   font-size: 60px;
-  background-color: #3d360150;
+  border: 1px solid #ff9100;
+  margin-top: -100px;
+  color: #ff9100;
+  text-align: center;
+  background-color: #08060000;
   padding: 20px 40px;
   transition: .5s;
-  scroll-behavior: smooth;
-}
+  text-shadow: 0px 0px 30px rgba(255, 166, 0, 0.5);
+  box-shadow: 0px 0px 30px rgba(255, 140, 0, 0.5);
 
+
+
+}
 #main-banner a:hover {
+  font-weight: bold;
+  box-shadow: 0px 0px 20px rgba(255, 140, 0, 0.5);
+  text-shadow: 0px 0px 20px rgba(112, 62, 1, 0.5);
+  color: #9e5a00;
   
+  background-color: #cab989;
   
-  color: #fcba03;
-  background-color: #15130e;
 }
 
 

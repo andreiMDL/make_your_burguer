@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should match the snapshot 1`] = `
+"<div data-v-3587acbb="" id="main-banner">
+  <!-- Adicionar animação de transição --><a data-v-3587acbb="" href="#div-pedido">Make Your Burger</a>
+</div>"
+`;

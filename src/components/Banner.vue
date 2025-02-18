@@ -1,5 +1,5 @@
 <template>
-  <div id="main-banner">
+  <div class="main-banner">
     <!-- Adicionar animação de transição -->
     <a @click="scrollToForm" href="#div-pedido">Make Your Burger</a>
     
@@ -13,7 +13,7 @@ export default {
 
     scrollToForm(event) {
       event.preventDefault();
-      const section = document.querySelector("#burger-form");
+      const section = document.querySelector(".burger-form");
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
       }
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style scoped>
-#main-banner {
+.main-banner {
   background-image: url("/public/img/burger.jpg");
   background-position: center;
   background-size: cover;
@@ -34,7 +34,7 @@ export default {
   justify-content: flex-start;
 }
 
-#main-banner a {
+.main-banner a {
   
   text-decoration: none;
   margin-left: 165px;
@@ -55,7 +55,7 @@ export default {
 
 
 }
-#main-banner a:hover {
+.main-banner a:hover {
   font-weight: bold;
   box-shadow: 0px 0px 20px rgba(255, 140, 0, 0.5);
   text-shadow: 0px 0px 20px rgba(112, 62, 1, 0.5);
@@ -67,7 +67,7 @@ export default {
 
 
 @media (max-width: 1061px) {
-  #main-banner {
+  .main-banner {
     background-position: right bottom;
     }
   }

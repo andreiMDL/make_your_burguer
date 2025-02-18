@@ -1,17 +1,18 @@
 <template>
-    <div id="div-pedido">
-         <!-- Transição de Home para pedidos -->
+    <div class="div-pedido">
         <Message :msg="msg" :v-show="msg" :v-html="msg"/>
-        <form id="burger-form" @submit="createburger">
+        <form class="burger-form" @submit="createburger">
             <div class="input-container" >
                 <label for="nome">Nome do cliente</label>
-                <input type="text" id="nome" name="nome" v-model="nome" placeholder="Digite o seu nome">
+                <input type="text" id="nome" name="nome" v-model="nome" placeholder="Digite o seu nome" :class="{'input-error': errors.nome}">
+                <span v-if="errors.nome" class="error-message">Nome é obrigatório</span>
             </div>
             <div class="input-container">
                 <label for="pao">Escolha o pão:</label>
                 <select name="pao" id="pao" v-model="pao">
                     <option disabled selected value="SelecioneSeuPao">Selecione o seu pão</option>
-                    <option v-for="pao in paes" :key="pao.id" :value="pao.tipo">{{ pao.tipo }}</option>
+                    <option v-for="pao in paes" :key="pao.id" :value="pao.tipo" :class="{'input-error': errors.pao}">{{ pao.tipo }} </option>
+                    <span v-if="errors.pao" class="error-message">Campo Obrigatório</span>
                 </select>
 
             </div>
@@ -19,8 +20,9 @@
                 <label for="carne">Escolha a carne:</label>
                 <select name="carne" id="carne" v-model="carne">
                     <option disabled selected value="selecioneSuaCarne">Selecione o tipo de carne</option>
-                    <option v-for="carne in carnes" :key="carne.id" :value="carne.tipo">{{ carne.tipo }}</option>
+                    <option v-for="carne in carnes" :key="carne.id" :value="carne.tipo" :class="{'input-error': errors.carne}">{{ carne.tipo }}</option>
                 </select>
+                <span v-if="errors.carne" class="error-message">Campo Obrigatório</span>
 
             </div>
             <div id="opcionais-container" class="input-container">
@@ -54,7 +56,8 @@ export default {
             carne: null,
             opcionais: [],
             status: "Solicitado",
-            msg: null
+            msg: null,
+            errors: {}
         }
     },
     methods: {
@@ -74,7 +77,22 @@ export default {
 
             e.preventDefault();
 
-            const data = {
+            this.errors = {};
+
+            if(!this.nome){
+                this.errors.nome = true;
+            }
+            if(!this.pao || this.pao === 'SelecioneSeuPao') {
+                this.errors.pao = true;
+            }
+            if(!this.carne || this.carne === 'SelecioneSuaCarne') {
+                this.errors.carne = this.carne;
+            }
+            if (Object.keys(this.errors).length > 0){
+                return;
+            }
+
+            const data = { 
                 
                 nome: this.nome,
                 carne: this.carne,
@@ -115,7 +133,7 @@ export default {
 </script>
 
 <style scoped>
-#burger-form {
+.burger-form {
 
     
     max-width: 400px;
@@ -149,6 +167,16 @@ select {
     padding: 8px;
     box-sizing: border-box;
 
+}
+
+input-error {
+    border: 2px solid red;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
 }
 
 #opcionais-container {

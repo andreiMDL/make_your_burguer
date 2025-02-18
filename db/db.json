@@ -111,16 +111,6 @@
       "status": "Em produção"
     },
     {
-      "id": "26b4",
-      "nome": "Andrei",
-      "carne": "Picanha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Em produção"
-    },
-    {
       "id": "afae",
       "nome": "joão",
       "carne": "Veggie burger",
@@ -157,6 +147,16 @@
       "pao": "Parmesão e Orégano",
       "opcionais": [
         "Pepino"
+      ],
+      "status": "Solicitado"
+    },
+    {
+      "id": "25ff",
+      "nome": "marcio",
+      "carne": "Veggie burger",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Bacon"
       ],
       "status": "Solicitado"
     }

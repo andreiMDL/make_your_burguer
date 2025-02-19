@@ -1,6 +1,8 @@
 <template>
     <div v-show="msg" class="message-container">
-      <p>{{ msg }}</p>
+      <div class="toast">
+        <p>{{ msg }}</p>
+      </div>
     </div>
   </template>
   
@@ -15,12 +17,24 @@
   
   <style scoped>
     .message-container {
-    color: #004085;
-    background-color: #cce5ff;
-    border: 2px solid #b8daff;
-    border-radius: 5px;
-    padding: 10px;
-    max-width: 400px;
-    margin: 30px auto;
+    position: fixed;
+    width: 100%;
+    top: 20px;
+    justify-content: center;
     }
+
+    .toast {
+      color: #004085;
+      background-color: #cce5ff;
+      border: 2px solid #b8daff;
+      border-radius: 25px;
+      padding: 20px;  
+      max-width: 400px;
+      margin: 50px auto;
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%)
+    }
+
   </style>

@@ -1,7 +1,12 @@
 <template>
   <div> 
     <Navbar :logo="logo_src" :alt="app_name"/>
-    <router-view/>
+
+    <router-view v-slot="{ Component }">
+      <transition name="route" mode="out-in">
+      <component :is="Component"></component>
+      </transition>
+    </router-view>
     <Footer />
   </div>
 </template>
@@ -44,5 +49,22 @@ export default{
     font-size: 42px;
     margin-bottom: 30px;
     color: #222;
+  }
+
+  /* route transitions */
+  .route-enter-from{
+    opavity: 0;
+    transform: translateX(100px);
+  }
+  .route-enter-active{
+    transition: all 0.3s ease-out;
+  }
+
+  .route-leave-to{ 
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  .route-leave-active {
+    transition: all 0.3s ease-in;
   }
 </style>

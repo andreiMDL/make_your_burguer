@@ -5,7 +5,11 @@
             <div class="input-container" >
                 <label for="nome">Nome do cliente</label>
                 <input type="text" id="nome" name="nome" v-model="nome" placeholder="Digite o seu nome" :class="{'input-error': errors.nome}">
-                <span v-if="errors.nome" class="error-message">Nome é obrigatório</span>
+                <span v-if="errors.nome" class="error-message">
+                    <div class="campo-obrigatorio">
+                        Campos Obrigatório
+                    </div>
+                </span>
             </div>
             <div class="input-container">
                 <label for="pao">Escolha o pão:</label>
@@ -13,7 +17,11 @@
                     <option disabled selected value="">Selecione o seu pão</option>
                     <option v-for="pao in paes" :key="pao.id" :value="pao.tipo" >{{ pao.tipo }}</option>
                 </select>
-                <span v-if="errors.pao" class="error-message">Campo Obrigatório</span>
+                <span v-if="errors.pao" class="error-message">
+                    <div class="campo-obrigatorio">
+                        Campos Obrigatório
+                    </div>
+                </span>
 
             </div>
             <div class="input-container">
@@ -22,7 +30,11 @@
                     <option disabled selected value="">Selecione o tipo de carne</option>
                     <option v-for="carne in carnes" :key="carne.id" :value="carne.tipo" >{{ carne.tipo }}</option>
                 </select>
-                <span v-if="errors.carne" class="error-message">Campo Obrigatório</span>
+                <span v-if="errors.carne" class="error-message">
+                    <div class="campo-obrigatorio">
+                        Campos Obrigatório
+                    </div>
+                </span>
 
             </div>
             <div id="opcionais-container" class="input-container">
@@ -123,7 +135,7 @@ export default {
   
             this.msg = `Pedido realizado com sucesso! Código: ${res.id}`;
 
-            //setTimeout(() => this.msg = null, 3000);
+            setTimeout(() => this.msg = null, 3000);
 
            
             this.nome = "";
@@ -235,4 +247,22 @@ select {
     background-color: transparent;
     color: #222;
 }
+
+.campo-obrigatorio {
+    font-size: 175%;
+    text-align: center;
+    width: 20%;
+    justify-content: center;
+    color: #850000;
+    background-color: #ff4141;
+    border: 2px solid #850000;
+    border-radius: 25px;
+    padding: 20px;  
+    max-width: 400px;
+    margin: 50px auto;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%)
+    }
 </style>

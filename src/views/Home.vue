@@ -3,7 +3,7 @@
     <Banner />
   <div class="main-container">
     
-    <h1>Monte o seu burger:</h1>
+    <h1>Monte o seu burger</h1>
     <burgerForm />
   </div>
   </div>

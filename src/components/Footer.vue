@@ -17,15 +17,18 @@
 
 
 #footer {
-    height: 115px;
+    height: 100px;
     background-color: #222;
     border-top: 4px solid #111;
     color: #ff9100;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    bottom: 0;
     width: 100%;
+    bottom: 0;
+    text-align: center;
+
 }
 </style>

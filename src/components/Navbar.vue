@@ -34,7 +34,7 @@ export default {
     z-index: 1000;
     background-color: #222;
     border-bottom: 4px solid #111;
-    padding: 5px 50px;
+    padding: 0.1% 1%;
 
     display: flex;
     justify-content: space-between; 

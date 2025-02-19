@@ -37,17 +37,17 @@ export default {
 .main-banner a {
   
   text-decoration: none;
-  margin-left: 165px;
+  margin-left: 6%;
   border-radius: 25px;
   font-family: "Marck Script", serif;
   
-  font-size: 60px;
+  font-size: 350%;
   border: 1px solid #ff9100;
-  margin-top: -100px;
+  margin-left: 8% ;
   color: #ff9100;
   text-align: center;
   background-color: #08060000;
-  padding: 20px 40px;
+  padding: 1% 3%;
   transition: .5s;
   text-shadow: 0px 0px 30px rgba(255, 166, 0, 0.5);
   box-shadow: 0px 0px 30px rgba(255, 140, 0, 0.5);

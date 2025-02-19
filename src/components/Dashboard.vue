@@ -109,6 +109,7 @@ export default {
 
 <style scoped>
 #burger-table {
+    
     max-width: 1200px;
     margin: 0 auto;
 
@@ -117,12 +118,13 @@ export default {
 #burger-table-heading,
 #burger-table-rows,
 #burger-table-row {
-    
+     
     display: flex;
     flex-wrap: wrap;
 }
 
 #burger-table-heading {
+    margin-top: 10%; 
     font-weight: bold;
     padding: 12px;
     border-bottom: 3px solid #333;
@@ -138,6 +140,7 @@ export default {
     padding: 12px;
     border-bottom: 1px solid #ccc;
 }
+
 
 #burger-table-heading .order-id,
 #burger-table-row .order-number{
@@ -166,7 +169,5 @@ select  {
     background-color: transparent;
     color: #222;
   }
-
-
 
 </style>

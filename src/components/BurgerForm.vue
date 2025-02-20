@@ -6,9 +6,9 @@
                 <label for="nome">Nome do cliente</label>
                 <input type="text" id="nome" name="nome" v-model="nome" placeholder="Digite o seu nome" :class="{'input-error': errors.nome}">
                 <span v-if="errors.nome" class="error-message">
-                    <div class="campo-obrigatorio">
-                        Campos Obrigatório
-                    </div>
+                        <div class="campo-obrigatorio">
+                            Campos Obrigatório
+                        </div>                   
                 </span>
             </div>
             <div class="input-container">
@@ -31,7 +31,7 @@
                     <option v-for="carne in carnes" :key="carne.id" :value="carne.tipo" >{{ carne.tipo }}</option>
                 </select>
                 <span v-if="errors.carne" class="error-message">
-                    <div class="campo-obrigatorio">
+                    <div class="campo-obrigatorio" >
                         Campos Obrigatório
                     </div>
                 </span>
@@ -107,6 +107,11 @@ export default {
                 this.errors.carne = true;
             }
 
+            setTimeout(() => {
+                this.errors.nome = false;
+                this.errors.pao = false;
+                this.errors.carne = false;
+            }, 3000);
             
             console.log(this.errors);
 
@@ -134,7 +139,6 @@ export default {
 
   
             this.msg = `Pedido realizado com sucesso! Código: ${res.id}`;
-
             setTimeout(() => this.msg = null, 3000);
 
            
@@ -248,14 +252,14 @@ select {
     color: #222;
 }
 
+
 .campo-obrigatorio {
     font-size: 175%;
     text-align: center;
     width: 20%;
     justify-content: center;
-    color: #850000;
-    background-color: #ff4141;
-    border: 2px solid #850000;
+    color: white;
+    background: #ff0022;   
     border-radius: 25px;
     padding: 20px;  
     max-width: 400px;
@@ -263,6 +267,8 @@ select {
     position: fixed;
     top: 20px;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);    
     }
+
 </style>

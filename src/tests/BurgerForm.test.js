@@ -6,7 +6,7 @@ import BurgerForm from '/home/leader/Make_Your_Burguer/make_your_burguer/src/com
 import { json } from 'stream/consumers';
 import { vi } from 'vitest';
 
-it('should render the burger form', () => {
+it('should render the burgerForm', () => {
     const wrapper = mount(BurgerForm)
     
     expect(wrapper.find('.burger-form').exists()).toBe(true)
@@ -137,16 +137,6 @@ it('should show an error message when name is empty', async () => {
     expect(wrapper.find('#nome').classes()).toContain('input-error')
   })
 
-it('should show an error message when bread is not selected', async() => {
-    const wrapper = mount(BurgerForm)
-
-    await wrapper.find('form').trigger('submit.prevent')
-    await wrapper.vm.$nextTick()
-
-    expect(wrapper.vm.errors.pao).toBe(true)
-    expect(wrapper.find('.error-message').exists()).toBe(true)
-    expect(wrapper.find('#pao').classes()).toContain('input-error')
-})
 
 it('should show an error message when bread is not selected', async() => {
     const wrapper = mount(BurgerForm)

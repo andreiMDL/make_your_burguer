@@ -1,8 +1,8 @@
 <template>
     <div v-show="msg" class="message-container">
-      <div class="toast">
-        <p>{{ msg }}</p>
-      </div>
+        <div class="toast">
+          <p>{{ msg }}</p>
+        </div>     
     </div>
   </template>
   

@@ -4,7 +4,7 @@
         <span id="logo-text">Make Your Burger</span>
     </router-link>
     
-    <div>
+    <div id="divRoutes">
         <router-link to="/">Home</router-link> 
         <router-link @click="slideRight" to="/pedidos">Pedidos</router-link>
     </div>

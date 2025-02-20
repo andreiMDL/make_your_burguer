@@ -124,7 +124,7 @@ export default {
 }
 
 #burger-table-heading {
-    margin-top: 10%; 
+    
     font-weight: bold;
     padding: 12px;
     border-bottom: 3px solid #333;

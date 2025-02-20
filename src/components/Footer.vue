@@ -27,8 +27,8 @@
     justify-content: center;
     position: relative;
     width: 100%;
-    bottom: 0;
+    
     text-align: center;
-
+    
 }
 </style>

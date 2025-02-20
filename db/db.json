@@ -87,7 +87,7 @@
         "Bacon",
         "Cheddar"
       ],
-      "status": "Em produção"
+      "status": "Solicitado"
     },
     {
       "id": "7053",
@@ -98,7 +98,7 @@
         "Pepino",
         "Tomate"
       ],
-      "status": ""
+      "status": "Em produção"
     },
     {
       "id": "bda1",
@@ -108,206 +108,7 @@
       "opcionais": [
         "Salame"
       ],
-      "status": "Em produção"
-    },
-    {
-      "id": "afae",
-      "nome": "joão",
-      "carne": "Veggie burger",
-      "pao": "Integral",
-      "opcionais": [
-        "Cheddar"
-      ],
-      "status": "Em produção"
-    },
-    {
-      "id": "ef0d",
-      "nome": "João",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "a908",
-      "nome": "João",
-      "carne": "Alcatra",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "082e",
-      "nome": "João",
-      "carne": "Maminha",
-      "pao": "Parmesão e Orégano",
-      "opcionais": [
-        "Pepino"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "25ff",
-      "nome": "marcio",
-      "carne": "Veggie burger",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "13e5",
-      "nome": "Andrei Moda",
-      "carne": "Picanha",
-      "pao": "3 Queijos",
-      "opcionais": [],
-      "status": "Solicitado"
-    },
-    {
-      "id": "edb8",
-      "nome": "João",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon",
-        "Tomate"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "b529",
-      "nome": "Andrei Moda",
-      "carne": "Picanha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Cebola roxa"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "0ebf",
-      "nome": "Andrei",
-      "carne": "Alcatra",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "c10c",
-      "nome": "Gabriel",
-      "carne": "Veggie burger",
-      "pao": "Integral",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "9cd6",
-      "nome": "joão",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Cheddar"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "b900",
-      "nome": "Gabriel",
-      "carne": "Alcatra",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "ccd7",
-      "nome": "Andrei Moda",
-      "carne": "Alcatra",
-      "pao": "Parmesão e Orégano",
-      "opcionais": [
-        "Tomate"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "4b1e",
-      "nome": "eduardo",
-      "carne": "Maminha",
-      "pao": "Parmesão e Orégano",
-      "opcionais": [],
-      "status": "Solicitado"
-    },
-    {
-      "id": "386c",
-      "nome": "joão",
-      "carne": "Alcatra",
-      "pao": "3 Queijos",
-      "opcionais": [],
-      "status": "Solicitado"
-    },
-    {
-      "id": "df23",
-      "nome": "eduardo",
-      "carne": "Picanha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Salame"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "28e3",
-      "nome": "eduardo",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [],
-      "status": "Solicitado"
-    },
-    {
-      "id": "ae8b",
-      "nome": "Andrei",
-      "carne": "Alcatra",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "6582",
-      "nome": "Andrei Moda",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
-      "opcionais": [],
-      "status": "Solicitado"
-    },
-    {
-      "id": "d3b6",
-      "nome": "Andrei Moda",
-      "carne": "Veggie burger",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Cheddar"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "e50b",
-      "nome": "Andrei Moda",
-      "carne": "Alcatra",
-      "pao": "Parmesão e Orégano",
-      "opcionais": [],
-      "status": "Solicitado"
+      "status": "Finalizado"
     }
   ]
 }

@@ -1,12 +1,13 @@
 <template>
   <div> 
     <Navbar :logo="logo_src" :alt="app_name"/>
-
-    <router-view v-slot="{ Component }">
+    <div>
+      <router-view v-slot="{ Component }">
       <transition name="route" mode="out-in">
       <component :is="Component"></component>
       </transition>
     </router-view>
+    </div>
     <Footer />
   </div>
 </template>
@@ -39,8 +40,11 @@ export default{
     box-sizing: border-box;
   }
 
-  .main-container{
-    margin: 18px;
+  .gerenciar_pedidos{
+    
+    padding-top: 9%;
+    padding-bottom: 3%;
+    
     min-height: border-box;
   }
 
@@ -51,9 +55,10 @@ export default{
     color: #222;
   }
 
+
   /* route transitions */
   .route-enter-from{
-    opavity: 0;
+    opacity: 0;
     transform: translateX(100px);
   }
   .route-enter-active{

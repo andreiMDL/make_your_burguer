@@ -1,7 +1,9 @@
 <template>
   <div>
-    <div class="main-container">
+    <div class="gerenciar_pedidos">
       <h1>Gerenciar Pedidos</h1>
+    </div>
+    <div>
       <Dashboard />
     </div>
   </div>

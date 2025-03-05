@@ -13,9 +13,9 @@
                 </span>
             </div>
             <div class="input-container">
-                <label for="pao">Escolha o pão:</label>
+                <label for="pao">Escolha o pão</label>
                 <select name="pao" id="pao" v-model="pao" :class="{ 'input-error': errors.pao }">
-                    <option disabled selected value="">Selecione o seu pão</option>
+                    
                     <option v-for="pao in paes" :key="pao.id" :value="pao.id">{{ pao.pao_tipo }}</option>
                 </select>
                 <span v-if="errors.pao" class="error-message">
@@ -26,9 +26,9 @@
 
             </div>
             <div class="input-container">
-                <label for="carne">Escolha a carne:</label>
+                <label for="carne">Escolha a carne</label>
                 <select name="carne" id="carne" v-model="carne" :class="{ 'input-error': errors.carne }">
-                    <option disabled selected value="">Selecione o tipo de carne</option>
+                    
                     <option v-for="carne in carnes" :key="carne.id" :value="carne.id">{{ carne.carne_tipo }}</option>
                 </select>
                 <span v-if="errors.carne" class="error-message">
@@ -39,7 +39,7 @@
 
             </div>
             <div id="opcionais-container" class="input-container">
-                <label id="opcionais-title" for="opcionais">Selecione os opcionais:</label>
+                <label id="opcionais-title" for="opcionais">Selecione os opcionais</label>
                 <div class="checkbox-container" v-for="opcional in opcionaisData" :key="opcional.id">
                     <input type="checkbox" name="opcionais" v-model="opcionais" :value="opcional.id">
                     <span>{{ opcional.opcional_tipo }}</span>
@@ -160,37 +160,111 @@ export default {
 <style scoped>
 .burger-form {
 
-    max-width: 400px;
+    background-color: #161616;
+    border-radius: 35px;
+    /* border: 2px solid #ff9100; */
+    padding: 3%;
+    max-width: 500px;
     margin: 0 auto;
-}
+    margin-bottom: 3%;
 
+    box-shadow: inset 0px 0px 35px rgb(9, 9, 9);
+
+
+}
 
 .input-container {
 
+    border-radius: 25px;
+    background-color: #161616;
     display: flex;
     flex-direction: column;
     align-content: center;
     margin-bottom: 7%;
 }
 
+
 label {
 
+    background-color: #161616;
     font-weight: bold;
     font-size: x-large;
     margin-bottom: 7%;
-    color: #222;
+    color: #ff9100;
     padding: 5px 10px;
     border-left: 4px solid #ff9100;
+    text-shadow: 0px 0px 30px rgb(0, 0, 0);
+}
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ff9100;
+    border-radius: 5px;
+    background-color: #222;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    
+    
 }
 
-input,
-select {
+input[type="checkbox"]:checked {
+    background-color: #ff910071;
+    box-shadow: 0px 0px 30px rgba(255, 166, 0, 0.5);
+    border: 2px solid #ff9100;
+}
+
+input {
+    background-color: #222;
     width: 100%;
     height: 36px;
     font-size: 16px;
     padding: 8px;
     box-sizing: border-box;
+    border-radius: 25px;
+    border: 1px solid #222;
+    color: #ff9100;
 
+    box-shadow: 0px 0px 15px rgba(9, 9, 9, 0.981);
+}
+
+select {
+
+    background-color: #222;
+    width: 100%;
+    height: 36px;
+    font-size: 16px;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 1px solid #222;
+    color: #ff9100;
+
+    box-shadow: 0px 0px 20px rgba(9, 9, 9, 0.981);
+}
+
+select option {
+    background-color: #161616;
+    color: #ff9100;
+    border: none;
+}
+
+select:focus {
+    border-radius: 25px;
+    outline: none;
+}
+
+/* Para estilizar a dropdown em navegadores que permitem */
+select::-webkit-scrollbar {
+    width: 8px;
+}
+
+select::-webkit-scrollbar-thumb {
+    background-color: #ff9100;
+    border-radius: 25px;
 }
 
 .input-error {
@@ -215,15 +289,21 @@ select {
 }
 
 .checkbox-container {
+    background-color: #161616;
     display: flex;
     align-items: center;
     width: 50%;
     margin-bottom: 20px;
+    color: #b9b9b9;
+
+    
+
 }
 
 .checkbox-container span,
 .checkbox-container input {
     width: auto;
+    background-color: #161616;
 }
 
 .checkbox-container span {
@@ -232,23 +312,26 @@ select {
 }
 
 .submit-btn {
-    border-radius: 20px ;
-    height: 45px;
-    background-color: #222;
+
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 100%;
+    border: 1px solid #222;
     color: #ff9100;
-    font-weight: bold;
-    border: 2px solid #222;
-    padding: 2px;
-    font-size: 16px;
-    margin: 0 auto;
-    cursor: pointer;
+    text-align: center;
+    background-color: #222;
+    height: 45px;
+    box-shadow: 0px 0px 15px rgba(9, 9, 9, 0.981);
     transition: .5s;
 
 }
 
 .submit-btn:hover {
-    background-color: transparent;
-    color: #222;
+    text-shadow: 0px 0px 30px rgba(255, 140, 0, 0.694);
+    box-shadow: inset 0px 0px 15px rgba(7, 7, 7, 0.981);
+    background-color: #111111;
+    /* border: .5px solid #ff9100af; */
+    color: #ff9100;
 }
 
 

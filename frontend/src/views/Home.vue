@@ -23,3 +23,15 @@ export default {
 }
 
 </script>
+
+<style>
+* {
+    background-color: #222;
+}
+
+h1 {
+  padding: 1%;
+  color: #ff9100;
+}
+
+</style>

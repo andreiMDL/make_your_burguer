@@ -39,8 +39,7 @@ export default {
   text-decoration: none;
   margin-left: 6%;
   border-radius: 25px;
-  font-family: "Marck Script", serif;
-  
+  font-family: "Marck Script", serif; 
   font-size: 350%;
   border: 1px solid #ff9100;
   margin-left: 8% ;
@@ -50,7 +49,7 @@ export default {
   padding: 1% 3%;
   transition: .5s;
   text-shadow: 0px 0px 30px rgba(255, 166, 0, 0.5);
-  box-shadow: 0px 0px 30px rgba(255, 140, 0, 0.5);
+  
 
 
 

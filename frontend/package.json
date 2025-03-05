@@ -5,7 +5,6 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "backend": "json-server --watch db/db.json",
     "test": "vitest"
   },
   "dependencies": {
@@ -16,6 +15,12 @@
     "express": "^4.21.2",
     "json-server": "^1.0.0-beta.3",
     "moleculer": "^0.14.35",
+    "moleculer-db": "^0.8.28",
+    "moleculer-db-adapter-sequelize": "^0.2.19",
+    "moleculer-repl": "^0.7.4",
+    "moleculer-web": "^0.10.7",
+    "mysql2": "^3.12.0",
+    "sequelize": "^6.37.5",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },

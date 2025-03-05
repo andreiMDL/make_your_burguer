@@ -167,7 +167,7 @@ it('should submit the form correctly when all fields are filled', async() => {
 
     await wrapper.find('form').trigger('submit.prevent')
 
-    expect(global.fetch).toHaveBeenCalledWith('http://localhost:3000/burgers', expect.objectContaining({
+    expect(global.fetch).toHaveBeenCalledWith('http://localhost:3000/api/burgers', expect.objectContaining({
         method: 'POST',
         headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify({

@@ -6,37 +6,40 @@
                 <label for="nome">Nome do cliente</label>
                 <input type="text" id="nome" name="nome" v-model="nome" placeholder="Digite o seu nome"
                     :class="{ 'input-error': errors.nome }">
-                <span v-if="errors.nome" class="error-message">
-                    <div class="campo-obrigatorio">
-                        Campos Obrigatório
-                    </div>
-                </span>
+                <transition name="fade">
+                    <span v-if="errors.nome" class="error-message">
+                        <div class="campo-obrigatorio">
+                            Campos Obrigatórios
+                        </div>
+                    </span>
+                </transition>
             </div>
             <div class="input-container">
                 <label for="pao">Escolha o pão</label>
                 <select name="pao" id="pao" v-model="pao" :class="{ 'input-error': errors.pao }">
-                    
+
                     <option v-for="pao in paes" :key="pao.id" :value="pao.id">{{ pao.pao_tipo }}</option>
                 </select>
-                <span v-if="errors.pao" class="error-message">
-                    <div class="campo-obrigatorio">
-                        Campos Obrigatório
-                    </div>
-                </span>
-
+                <transition name="fade">
+                    <span v-if="errors.pao" class="error-message">
+                        <div class="campo-obrigatorio">
+                            Campos Obrigatórios
+                        </div>
+                    </span>
+                </transition>
             </div>
             <div class="input-container">
                 <label for="carne">Escolha a carne</label>
                 <select name="carne" id="carne" v-model="carne" :class="{ 'input-error': errors.carne }">
-                    
                     <option v-for="carne in carnes" :key="carne.id" :value="carne.id">{{ carne.carne_tipo }}</option>
                 </select>
-                <span v-if="errors.carne" class="error-message">
-                    <div class="campo-obrigatorio">
-                        Campos Obrigatório
-                    </div>
-                </span>
-
+                <transition name="fade">
+                    <span v-if="errors.carne" class="error-message">
+                        <div class="campo-obrigatorio">
+                            Campos Obrigatórios
+                        </div>
+                    </span>
+                </transition>
             </div>
             <div id="opcionais-container" class="input-container">
                 <label id="opcionais-title" for="opcionais">Selecione os opcionais</label>
@@ -100,9 +103,9 @@ export default {
             } catch (error) {
                 console.error("Erro ao buscar ingredientes:", error);
             };
-            
+
         },
-        
+
         async createburger(e) {
             e.preventDefault();
 
@@ -112,7 +115,12 @@ export default {
             if (!this.pao || this.pao === "") this.errors.pao = true;
             if (!this.carne || this.carne === "") this.errors.carne = true;
 
-            if (this.errors.nome || this.errors.pao || this.errors.carne) return;
+            if (this.errors.nome || this.errors.pao || this.errors.carne) {
+                setTimeout(() => {
+                    this.errors = { nome: false, pao: false, carne: false };
+                }, 3000);
+                return;
+            }
 
             const data = {
                 nome: this.nome,
@@ -130,7 +138,7 @@ export default {
 
                 this.msg = `Pedido realizado com sucesso! Código: ${response.data.id}`;
                 // biome-ignore lint/suspicious/noAssignInExpressions: <explanation>
-                setTimeout(() => (this.msg = null), 3000);
+                setTimeout(() => (this.msg = ""), 3000);
 
                 this.nome = "";
                 this.carne = "";
@@ -162,15 +170,11 @@ export default {
 
     background-color: #161616;
     border-radius: 35px;
-    /* border: 2px solid #ff9100; */
     padding: 3%;
     max-width: 500px;
     margin: 0 auto;
     margin-bottom: 3%;
-
     box-shadow: inset 0px 0px 35px rgb(9, 9, 9);
-
-
 }
 
 .input-container {
@@ -195,6 +199,7 @@ label {
     border-left: 4px solid #ff9100;
     text-shadow: 0px 0px 30px rgb(0, 0, 0);
 }
+
 input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
@@ -207,8 +212,6 @@ input[type="checkbox"] {
     display: inline-block;
     position: relative;
     cursor: pointer;
-    
-    
 }
 
 input[type="checkbox"]:checked {
@@ -227,7 +230,6 @@ input {
     border-radius: 25px;
     border: 1px solid #222;
     color: #ff9100;
-
     box-shadow: 0px 0px 15px rgba(9, 9, 9, 0.981);
 }
 
@@ -242,7 +244,6 @@ select {
     border-radius: 25px;
     border: 1px solid #222;
     color: #ff9100;
-
     box-shadow: 0px 0px 20px rgba(9, 9, 9, 0.981);
 }
 
@@ -257,24 +258,16 @@ select:focus {
     outline: none;
 }
 
-/* Para estilizar a dropdown em navegadores que permitem */
-select::-webkit-scrollbar {
-    width: 8px;
-}
-
-select::-webkit-scrollbar-thumb {
-    background-color: #ff9100;
-    border-radius: 25px;
-}
-
 .input-error {
     border: 1px solid red;
+    box-shadow: inset 0px 0px 10px rgba(255, 0, 0, 0.981);
 }
 
 .error-message {
     color: red;
     font-size: 12px;
     margin-top: 5px;
+    
 }
 
 #opcionais-container {
@@ -295,13 +288,15 @@ select::-webkit-scrollbar-thumb {
     width: 50%;
     margin-bottom: 20px;
     color: #b9b9b9;
+}
 
-    
-
+.checkbox-container input:hover {
+    box-shadow: 0px 0px 20px rgba(149, 82, 0, 0.5);
 }
 
 .checkbox-container span,
 .checkbox-container input {
+    transition: .2s ease-in-out;
     width: auto;
     background-color: #161616;
 }
@@ -310,6 +305,7 @@ select::-webkit-scrollbar-thumb {
     margin-left: 6px;
     font-weight: bold;
 }
+
 
 .submit-btn {
 
@@ -330,7 +326,7 @@ select::-webkit-scrollbar-thumb {
     text-shadow: 0px 0px 30px rgba(255, 140, 0, 0.694);
     box-shadow: inset 0px 0px 15px rgba(7, 7, 7, 0.981);
     background-color: #111111;
-    /* border: .5px solid #ff9100af; */
+    
     color: #ff9100;
 }
 
@@ -340,7 +336,7 @@ select::-webkit-scrollbar-thumb {
     text-align: center;
     width: 20%;
     justify-content: center;
-    color: white;
+    
     background: #ff0022;   
     border-radius: 25px;
     padding: 20px;  
@@ -352,5 +348,14 @@ select::-webkit-scrollbar-thumb {
     transform: translateX(-50%);
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);    
     }
+    
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s ease-out;
+}
+
+.fade-enter-from, .fade-leave-to {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
 
 </style>

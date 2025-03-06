@@ -26,12 +26,15 @@ export default {
 
 <style>
 * {
+  border-top: 2px #161616;
     background-color: #222;
 }
 
 h1 {
+  margin-top: 2%;
   padding: 1%;
   color: #ff9100;
+  text-shadow: 0px 0px 15px rgb(0, 0, 0);
 }
 
 </style>

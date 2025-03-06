@@ -24,9 +24,9 @@
     }
 
     .toast {
-      color: #004085;
-      background-color: #cce5ff;
-      border: 2px solid #b8daff;
+      color: #006f36;
+      background-color: #00cb62;
+      border: 2px solid #006f36;
       border-radius: 25px;
       padding: 20px;  
       max-width: 400px;
@@ -35,6 +35,10 @@
       top: 20px;
       left: 50%;
       transform: translateX(-50%)
+    }
+
+    p {
+      background-color: #00cb62 ;
     }
 
   </style>

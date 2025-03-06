@@ -19,3 +19,17 @@ export default{
   } 
 }
 </script>
+
+<style>
+* {
+    
+    background-color: #161616;
+}
+
+h1 {
+  
+  color: #ff9100;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+}
+
+</style>

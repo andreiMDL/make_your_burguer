@@ -42,24 +42,33 @@ export default {
     
 }
 
+#logo-text {
+    background-color: #222 ;
+}
+
 #logo-url {
     text-decoration: none;
-    transition:  .5s;
+    transition:  .5s ease-in-out;
+    
 }
 
 #logo-url :hover{
-    transition:  .5s;
+    transition: .5s ;
     color: #ffebb3;
     text-shadow: 0px 0px 20px rgba(243, 138, 10, 0.5);
+    
 }
 
 #logo-text {
+    
     color: #ff9100;
     font-family: "Marck Script", serif;
     font-size: 30px;
     text-shadow: 0px 0px 30px rgba(255, 166, 0, 0.5);
 }
-
+#divRoutes {
+    background-color: #222 ;
+}
 
 #nav a {
     font-weight: bold;
@@ -68,6 +77,7 @@ export default {
     margin: 0 15px;
     transition: 0.5s;
     padding: 10px;
+    background-color: #222 ;
 }
 
 #nav a:hover {

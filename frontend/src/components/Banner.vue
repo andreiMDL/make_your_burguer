@@ -32,11 +32,13 @@ export default {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  border-bottom: 4px solid #080808;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.761);
 }
 
 .main-banner a {
   
-  text-decoration: none;
+  text-decoration: none; 
   margin-left: 6%;
   border-radius: 25px;
   font-family: "Marck Script", serif; 
@@ -49,9 +51,6 @@ export default {
   padding: 1% 3%;
   transition: .5s;
   text-shadow: 0px 0px 30px rgba(255, 166, 0, 0.5);
-  
-
-
 
 }
 .main-banner a:hover {
